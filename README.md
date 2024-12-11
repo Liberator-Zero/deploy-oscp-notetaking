@@ -21,5 +21,5 @@ Run deploy-checklist.py:
 After building the directories, run the deploy-checklist.py script to start the Flask web server:
 ```
 python3 deploy-checklist.py
-This will set up the interactive checklist and the associated features.
 ```
+Navigate to the http://localhost:9443
