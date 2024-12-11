@@ -1,1 +1,0 @@
-{"aero_192.168.10.145": {"reconnaissance": [true, false], "enumeration": [false, false], "exploitation": [false], "post_exploitation": [false]}, "domain_controller_10.10.10.147": {"reconnaissance": [false, false], "enumeration": [true, true], "exploitation": [false], "post_exploitation": [false]}}
