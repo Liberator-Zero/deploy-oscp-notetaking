@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Checklist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>Edit Checklist  <a href="{{ url_for('index') }}" class="back-button">Back</a> <!-- Back Button --></header>
+
+    <div class="container">
+        <div class="card">
+            <form method="POST">
+                <textarea name="checklist_template" rows="20" cols="80">{{ checklist_template }}</textarea><br>
+                <button type="submit">Save Template</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Designed by Liberator-Zero - All Rights Reserved
+    </footer>
+</body>
+</html>

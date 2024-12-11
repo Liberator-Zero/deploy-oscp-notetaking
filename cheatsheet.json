@@ -1,0 +1,1 @@
+{"Full NMAP scan": "sudo nmap -sS -sV -sC -Pn -n -p- -T4 <IP> | sudo tee ip.nmap"}

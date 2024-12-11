@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ system }} - Penetration Testing Checklist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>{{ system }} - Penetration Testing Checklist <a href="{{ url_for('index') }}" class="back-button">Back</a> <!-- Back Button --></header>
+
+    <div class="container">
+        <div class="card">
+            <form method="POST">
+                {% for phase, tasks in checklist_template.items() %}
+                    <h3 class="system-block">{{ phase | capitalize }}</h3>
+                    <ul>
+                        {% for task in tasks %}
+                            <li>
+                                <input type="checkbox" name="{{ phase }}_{{ loop.index0 }}" {% if system_progress[phase][loop.index0] %} checked {% endif %}>
+                                {{ task }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+                <button type="submit">Save Progress</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Designed by Liberator-Zero - All Rights Reserved
+    </footer>
+</body>
+</html>

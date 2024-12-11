@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penetration Testing Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        Penetration Testing Dashboard
+        <div class="nav-links">
+            <a href="{{ url_for('cheatsheet') }}">Cheatsheet</a>
+            <a href="{{ url_for('bookmarks') }}">Bookmarks</a>
+            <a href="{{ url_for('githubs') }}">GitHubs</a>
+            <a href="{{ url_for('edit_checklist') }}">Edit Checklist</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section-title">Systems</div>
+
+        {% for category, systems_in_category in systems.items() %}
+        <div class="category-box">
+            <div class="dropdown">
+                <div class="dropdown-header">
+                    {{ category | capitalize }}
+                </div>
+                <div class="dropdown-content">
+                    {% for system in systems_in_category %}
+                    <a href="{{ url_for('system', category=category, system=system) }}">{{ system }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        &copy; 2024 Designed by Liberator-Zero - All Rights Reserved
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+            dropdownHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const dropdown = this.parentElement;
+                    dropdown.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

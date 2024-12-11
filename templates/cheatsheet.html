@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>Cheatsheet  <a href="{{ url_for('index') }}" class="back-button">Back</a> <!-- Back Button --></header>
+
+    <div class="container">
+        <div class="card">
+            <form method="POST">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="content">Content:</label><br>
+                <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Existing Cheatsheets</h2>
+            <ul>
+            {% for title, content in cheatsheet_content.items() %}
+                <li><strong>{{ title }}</strong>: <pre>{{ content }}</pre></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Designed by Liberator-Zero - All Rights Reserved
+    </footer>
+</body>
+</html>

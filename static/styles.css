@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #3a3a75;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Section Title (Systems) */
+.section-title {
+    font-size: 2em;
+    color: white; /* White font color */
+    text-align: center; /* Center the text */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold; /* Make text bold */
+    padding: 20px; /* Add padding inside the box */
+    background-color: #333; /* Purple background */
+    border: 2px solid #333; /* Border color same as background */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Make the box take up the full width of the page */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    margin-bottom: 18px;
+}
+
+.dropdown-header {
+    background-color: #3a3a75;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 100%; /* Make dropdown content take full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.dropdown-content a {
+    color: white; /* White text on dark background */
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.1em;
+    background-color: #333; /* Very dark gray background */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 5px; /* Space between the links */
+    width: 100%; /* Ensure each link spans the full width of the dropdown */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.dropdown-content a:hover {
+    background-color: #555; /* Lighter dark gray on hover */
+}
+ 
+.dropdown.open .dropdown-content {
+    display: block;
+}
+
+
+/* Page Link Styles */
+.nav-links a {
+    color: white;
+    font-size: 0.6em;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #3a3a75;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 30px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #3a3a75;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Code Block Formatting */
+pre {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* System Block Font */
+.system-block {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+}
+
+/* Standalone and Active Directory Box Styling */
+.category-box {
+    padding: 20px;
+    border: 2px solid #3a3a75;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+/* System Links Styling */
+.system-link {
+    background-color: #3a3a75;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.system-link:hover {
+    background-color: #333;
+}
+
+/* Ensure the body takes the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox to make the footer stick to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* The content area should take up the remaining space */
+.container {
+    flex: 1;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Back Button Styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3a3a75;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #333;
+}

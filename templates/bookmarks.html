@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>Bookmarks  <a href="{{ url_for('index') }}" class="back-button">Back</a> <!-- Back Button -->   </header>
+
+    <div class="container">
+        <div class="card">
+            <form method="POST">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+                <label for="url">URL:</label><br>
+                <textarea id="url" name="url" rows="4" cols="50"></textarea><br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Existing Bookmarks</h2>
+            <ul>
+            {% for title, url in bookmarks_content.items() %}
+                <li><strong>{{ title }}</strong>: <a href="{{ url }}" target="_blank">{{ url }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Designed by Liberator-Zero - All Rights Reserved
+    </footer>
+</body>
+</html>
