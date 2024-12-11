@@ -1,1 +1,0 @@
-{"reconnaissance": ["Identify domain names", "Gather subdomains"], "enumeration": ["Port scan", "Identify running services"], "exploitation": ["Attempt known exploits"], "post_exploitation": ["Extract sensitive data"]}
